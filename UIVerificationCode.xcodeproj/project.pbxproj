@@ -12,7 +12,7 @@
 		D628E9BC211E45EA0022194F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D628E9BA211E45EA0022194F /* Main.storyboard */; };
 		D628E9BE211E45EB0022194F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D628E9BD211E45EB0022194F /* Assets.xcassets */; };
 		D628E9C1211E45EB0022194F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D628E9BF211E45EB0022194F /* LaunchScreen.storyboard */; };
-		D628E9CA211E461B0022194F /* CodeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D628E9C9211E461B0022194F /* CodeInputView.swift */; };
+		D628E9CA211E461B0022194F /* UIVerificationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D628E9C9211E461B0022194F /* UIVerificationCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		D628E9BD211E45EB0022194F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D628E9C0211E45EB0022194F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D628E9C2211E45EB0022194F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D628E9C9211E461B0022194F /* CodeInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeInputView.swift; sourceTree = "<group>"; };
+		D628E9C9211E461B0022194F /* UIVerificationCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVerificationCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 		D628E9C8211E46110022194F /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D628E9C9211E461B0022194F /* CodeInputView.swift */,
+				D628E9C9211E461B0022194F /* UIVerificationCode.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D628E9CA211E461B0022194F /* CodeInputView.swift in Sources */,
+				D628E9CA211E461B0022194F /* UIVerificationCode.swift in Sources */,
 				D628E9B9211E45EA0022194F /* ViewController.swift in Sources */,
 				D628E9B7211E45EA0022194F /* AppDelegate.swift in Sources */,
 			);

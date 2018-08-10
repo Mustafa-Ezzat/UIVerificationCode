@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var verifyCodeView: UIView!
-    var codeInputView:CodeInputView!
+    var codeInputView:UIVerificationCode!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
 
     func setupCodeInput() {
         let frame = CGRect(x: 0, y: 0, width: verifyCodeView.frame.size.width, height: verifyCodeView.frame.size.height)
-        codeInputView = CodeInputView(frame: frame)
+        codeInputView = UIVerificationCode(frame: frame)
         codeInputView.delegate = self
         codeInputView.errorColor = UIColor.red
         codeInputView.textColor = UIColor.black
@@ -48,8 +48,8 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: CodeInputViewDelegate{
-    func codeInputView(_ codeInputView: CodeInputView, didFinishWithCode code: String) {
+extension ViewController: UIVerificationCodeDelegate{
+    func verificationCode(_ verificationCode: UIVerificationCode, didFinishWithCode code: String) {
         codeInputView.showBorderColor()
     }
     

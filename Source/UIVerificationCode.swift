@@ -1,7 +1,12 @@
 import UIKit
 
-open class CodeInputView: UIView, UIKeyInput {
-    open var delegate: CodeInputViewDelegate?
+public protocol UIVerificationCodeDelegate {
+    func verificationCode(_ verificationCode: UIVerificationCode, didFinishWithCode code: String)
+    func codeDeleteBackward()
+}
+
+open class UIVerificationCode: UIView, UIKeyInput {
+    open var delegate: UIVerificationCodeDelegate?
     private var nextTag = 1
     var codeLabelList = [UILabel]()
 
@@ -65,7 +70,7 @@ open class CodeInputView: UIView, UIKeyInput {
                 for index in 1..<nextTag {
                     code += (viewWithTag(index)! as! UILabel).text!
                 }
-                delegate?.codeInputView(self, didFinishWithCode: code)
+                delegate?.verificationCode(self, didFinishWithCode: code)
             }
         }
     }
@@ -99,11 +104,6 @@ open class CodeInputView: UIView, UIKeyInput {
             label.borderColor = backGrounded
         }
     }
-}
-
-public protocol CodeInputViewDelegate {
-    func codeInputView(_ codeInputView: CodeInputView, didFinishWithCode code: String)
-    func codeDeleteBackward()
 }
 
 extension UIView{
