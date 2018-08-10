@@ -3,7 +3,6 @@ import UIKit
 open class CodeInputView: UIView, UIKeyInput {
     open var delegate: CodeInputViewDelegate?
     private var nextTag = 1
-    private var maxTag = 4
     var codeLabelList = [UILabel]()
 
     // MARK: - UIResponder
@@ -16,6 +15,7 @@ open class CodeInputView: UIView, UIKeyInput {
     open var codeWidth: CGFloat = 64.0
     open var codeHeight: CGFloat = 40.0
     open var codeGap: CGFloat = 15.0
+    open var maxTag = 4
 
     open override var canBecomeFirstResponder : Bool {
         return true
@@ -25,8 +25,10 @@ open class CodeInputView: UIView, UIKeyInput {
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
-
         // Add six digitLabels
+    }
+    
+    open func setupCode(){
         var frame = CGRect(x: 0, y: 0, width: codeWidth, height: codeHeight)
         for index in 1...maxTag {
             let digitLabel = UILabel(frame: frame)
@@ -34,9 +36,9 @@ open class CodeInputView: UIView, UIKeyInput {
             digitLabel.font = .systemFont(ofSize: 42)
             digitLabel.tag = index
             digitLabel.text = codeEmptyStype
-            digitLabel.layer.cornerRadius = cornerRounded
-            digitLabel.layer.borderWidth = borderStrock
-            digitLabel.layer.borderColor = backGrounded.cgColor
+            digitLabel.cornerRadius = cornerRounded
+            digitLabel.borderWidth = borderStrock
+            digitLabel.borderColor = backGrounded
             digitLabel.backgroundColor = backGrounded
             digitLabel.textAlignment = .center
             addSubview(digitLabel)
@@ -44,6 +46,7 @@ open class CodeInputView: UIView, UIKeyInput {
             codeLabelList.append(digitLabel)
         }
     }
+    
     required public init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") } // NSCoding
 
     // MARK: - UIKeyInput
@@ -87,13 +90,13 @@ open class CodeInputView: UIView, UIKeyInput {
     
     open func showBorderColor() {
         for label in codeLabelList {
-            label.layer.borderColor = errorColor.cgColor
+            label.borderColor = errorColor
         }
     }
     
     open func hideBorderColor() {
         for label in codeLabelList {
-            label.layer.borderColor = backGrounded.cgColor
+            label.borderColor = backGrounded
         }
     }
 }
@@ -101,4 +104,34 @@ open class CodeInputView: UIView, UIKeyInput {
 public protocol CodeInputViewDelegate {
     func codeInputView(_ codeInputView: CodeInputView, didFinishWithCode code: String)
     func codeDeleteBackward()
+}
+
+extension UIView{
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
+    }
+    
+    @IBInspectable var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor? {
+        get {
+            return UIColor(cgColor: layer.borderColor!)
+        }
+        set {
+            layer.borderColor = newValue?.cgColor
+        }
+    }
 }
