@@ -15,7 +15,7 @@ pod 'UIVerificationCode'
     var verificationCode:UIVerificationCode!
 
 4- In your UIViewController add this method for setup
-   '''
+   ```
    func setupCodeInput() 
     {
         let frame = CGRect(x: 0, y: 0, width: verifyCodeView.frame.size.width, height: verifyCodeView.frame.size.height)
@@ -30,7 +30,7 @@ pod 'UIVerificationCode'
         codeInputView.addGestureRecognizer(tapGesture)
         codeInputView.setupCode()
     }
-'''
+```
 5- Then call it in viewDidLoad
 
 6- Conform UIVerificationCodeDelegate
