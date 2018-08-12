@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var verifyCodeView: UIView!
-    var codeInputView:UIVerificationCode!
+    var verificationCode:UIVerificationCode!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,36 +27,33 @@ class ViewController: UIViewController {
 
     func setupCodeInput() {
         let frame = CGRect(x: 0, y: 0, width: verifyCodeView.frame.size.width, height: verifyCodeView.frame.size.height)
-        codeInputView = UIVerificationCode(frame: frame)
-        codeInputView.delegate = self
-        codeInputView.errorColor = UIColor.red
-        codeInputView.textColor = UIColor.black
-        codeInputView.maxTag = 4
-        codeInputView.codeWidth = 64
-        verifyCodeView.addSubview(codeInputView)
+        verificationCode = UIVerificationCode(frame: frame)
+        verificationCode.delegate = self
+        verificationCode.errorColor = UIColor.red
+        verificationCode.textColor = UIColor.black
+        verificationCode.maxTag = 4
+        verificationCode.codeWidth = 64
+        verifyCodeView.addSubview(verificationCode)
         let tapGesture = UITapGestureRecognizer(target: self, action:  #selector (self.showKeyboardAction (_:)))
-        codeInputView.addGestureRecognizer(tapGesture)
-        
-        codeInputView.setupCode()
+        verificationCode.addGestureRecognizer(tapGesture)
+        verificationCode.setupCode()
     }
     
     @objc func showKeyboardAction(_ sender:UITapGestureRecognizer)
     {
         // do other task
-        codeInputView.becomeFirstResponder()
+        verificationCode.becomeFirstResponder()
     }
 
 }
 
 extension ViewController: UIVerificationCodeDelegate{
     func verificationCode(_ verificationCode: UIVerificationCode, didFinishWithCode code: String) {
-        codeInputView.showBorderColor()
+        verificationCode.showBorderColor()
     }
     
     func codeDeleteBackward() {
-        codeInputView.hideBorderColor()
+        verificationCode.hideBorderColor()
     }
-    
-    
 }
 

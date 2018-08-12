@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'UIVerificationCode'
   s.version          = '1.0.0'
-  s.summary          = 'Design your UI Verification Code with flexible number of digits.'
+  s.summary          = 'UI Verification Code'
  
   s.description      = <<-DESC
-Auth through Touch ID or Face ID!
+Design your UI Verification Code with flexible number of digits.
                        DESC
  
   s.homepage         = 'https://github.com/Mustafa-Ezzat/UIVerificationCode'
