@@ -62,7 +62,7 @@ Input
 ![Screenshot](IMG_4572.jpg)
 
 ```
-if error occurs
+If error occurs
 ```
 
 ![Screenshot](IMG_4573.jpg)
