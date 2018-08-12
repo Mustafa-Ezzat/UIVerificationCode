@@ -14,7 +14,7 @@ pod 'UIVerificationCode'
     @IBOutlet weak var verifyCodeView: UIView!
 ```
 
-3- In your UIViewController.swift add this line
+3- In your UIViewController.swift declare object from UIVerificationCode
 ```
     var verificationCode:UIVerificationCode!
 ```
