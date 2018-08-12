@@ -1,6 +1,3 @@
-# Demo
-![Screenshot](IMG_4572.jpg) ![Screenshot](IMG_4573.jpg)
-
 # UIVerificationCode
 Design your UI Verification Code with flexible number of digits. 
 
@@ -57,3 +54,4 @@ extension ViewController: UIVerificationCodeDelegate
 }
 ```
 # Time to try let's go!
+![Screenshot](IMG_4572.jpg) ![Screenshot](IMG_4573.jpg)
