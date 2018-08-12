@@ -2,17 +2,22 @@
 Design your UI Verification Code with flexible number of digits. 
 
 # Install via cocoapods
-
+```
 pod 'UIVerificationCode'
+```
 
 # Usage
 1- In Your Stroyboard drag UIView in your UIViewController
 
 2- Outlet This UIView in Your UIViewController.swift
+```
     @IBOutlet weak var verifyCodeView: UIView!
+```
 
 3- In your UIViewController.swift add this line
+```
     var verificationCode:UIVerificationCode!
+```
 
 4- In your UIViewController add this method for setup
    ```
