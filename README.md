@@ -15,7 +15,9 @@ pod 'UIVerificationCode'
     var verificationCode:UIVerificationCode!
 
 4- In your UIViewController add this method for setup
-    func setupCodeInput() {
+   
+   func setupCodeInput() 
+    {
         let frame = CGRect(x: 0, y: 0, width: verifyCodeView.frame.size.width, height: verifyCodeView.frame.size.height)
         codeInputView = UIVerificationCode(frame: frame)
         codeInputView.delegate = self
@@ -33,7 +35,8 @@ pod 'UIVerificationCode'
 
 6- Conform UIVerificationCodeDelegate
 
-extension ViewController: UIVerificationCodeDelegate{
+extension ViewController: UIVerificationCodeDelegate
+{
     func verificationCode(_ verificationCode: UIVerificationCode, didFinishWithCode code: String) {
         //do somthing here for example show error
         verificationCode.showBorderColor()
