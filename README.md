@@ -34,7 +34,7 @@ pod 'UIVerificationCode'
 5- Then call it in viewDidLoad
 
 6- Conform UIVerificationCodeDelegate
-
+```
 extension ViewController: UIVerificationCodeDelegate
 {
     func verificationCode(_ verificationCode: UIVerificationCode, didFinishWithCode code: String) {
@@ -47,5 +47,5 @@ extension ViewController: UIVerificationCodeDelegate
         verificationCode.hideBorderColor()
     }
 }
-
+```
 # Time to try let's go!
