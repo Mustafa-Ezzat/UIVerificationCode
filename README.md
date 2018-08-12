@@ -54,4 +54,15 @@ extension ViewController: UIVerificationCodeDelegate
 }
 ```
 # Time to try let's go!
-![Screenshot](IMG_4572.jpg) ![Screenshot](IMG_4573.jpg)
+
+```
+Input
+```
+
+![Screenshot](IMG_4572.jpg)
+
+```
+if error occurs
+```
+
+![Screenshot](IMG_4573.jpg)
