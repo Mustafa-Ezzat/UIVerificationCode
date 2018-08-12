@@ -1,8 +1,5 @@
 # Demo
-1- Input
-![Screenshot](IMG_4572.jpg)
-2- Error
-![Screenshot](IMG_4573.jpg)
+![Screenshot](IMG_4572.jpg) ![Screenshot](IMG_4573.jpg)
 
 # UIVerificationCode
 Design your UI Verification Code with flexible number of digits. 
