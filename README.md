@@ -3,7 +3,7 @@ Design your UI Verification Code with flexible number of digits.
 
 # Install via cocoapods
 ```
-pod 'UIVerificationCode'
+pod ‘UIVerificationCode’, :git => ’https://github.com/Mustafa-Ezzat/UIVerificationCode'
 ```
 
 # Usage
